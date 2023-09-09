@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore the meanings of words with The Dictionary. Instantly find definitions and explanations for any word you search."
+    />
+    <meta
+      name="keywords"
+      content="dictionary, word meanings, vocabulary, language, definitions, fast API"
+    />
+    <meta name="author" content="Abhishek Rajput" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="apple-mobile-web-app-title" content="The Dictionary" />
+    <meta name="application-name" content="The Dictionary" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="og:title" content="The Dictionary - Instant Word Meanings" />
+    <meta
+      name="og:description"
+      content="Explore the meanings of words with The Dictionary. Instantly find definitions and explanations for any word you search."
+    />
+    <meta name="og:url" content="URL of your website" />
+    <meta name="og:site_name" content="The Dictionary" />
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="en_US" />
+    <meta
+      name="twitter:title"
+      content="The Dictionary - Instant Word Meanings"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore the meanings of words with The Dictionary. Instantly find definitions and explanations for any word you search."
+    />
+    <link rel="canonical" href="URL of the main search page" />
+    <link rel="stylesheet" href="URL to your website's main stylesheet" />
+    <link
+      rel="apple-touch-icon"
+      href="favicon_io/favicon.ico"
+      type="image/png"
+    />
+    <link rel="manifest" href="URL to your website's web app manifest" />
+    <link
+      rel="shortcut icon"
+      href="favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Rubik+Iso&display=swap"
+      rel="stylesheet"
+    />
+    <title>The Dictionary App</title>
+  </head>
+  <body style="font-family: 'Lexend', sans-serif">
+    <nav class="navbar navbar-expand-lg bg-dark p-3" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a
+          class="navbar-brand text-light"
+          href="index.html"
+          style="font-family: 'Rubik Iso', cursive; font-size: 1.5rem"
+          >TheDictionary</a
+        >
+        <button
+          class="navbar-toggler navbar-toggler-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light font-weight-bold"
+                aria-current="page"
+                href="#"
+                ><strong>Home</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Other Info!
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="history.html"
+                    style="color: inherit; background-color: transparent"
+                    >Our History</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="tech.html"
+                    style="color: inherit; background-color: transparent"
+                    >How we do it!</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="contact.html"
+                    style="color: inherit; background-color: transparent"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              id="searchinput"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              id="searchbtn"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="px-4 py-5 my-5 text-center">
+        <img
+          class="d-block mx-auto mb-4"
+          src="images/dictionary.png"
+          alt=""
+          height="120"
+        />
+        <h1 class="display-5 fw-bold text-body-emphasis">
+          <span id="wordheading">Your word will appear here...</span>
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">
+            <span id="definition" style="text-align: justify"
+              >Type your desired word in the above search bar to know its
+              meaning.</span
+            >
+          </p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <button type="button" onclick="redirectToHistoryPage()" class="btn btn-success btn-lg px-4 gap-3">
+              Our History
+            </button>
+            <button type="button" onclick="redirectToTechPage()"class="btn btn-outline-dark btn-lg px-4">
+              How we do it!
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-light py-4 d-flex flex-column justify-content-center" >
+      <div class="container mt-3">
+        <div class="row mb-5">
+          <div class="col-md-6" style="text-align: justify;">
+            <h4 class="mb-4 fw-bolder"><srtong>Tip of the Day</srtong></h4>
+                <p>Strengthen your vocabulary by reading regularly. Dive into books, articles, and news to discover new words. Pay attention to context for deeper understanding. With each read, expand your language toolkit and enhance your communication skills."</p>
+          </div>
+          <div class="col-md-3">
+            <h4 class="mb-4 fw-bolder"><srtong>Quick Links</srtong></h4>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" style="color: #ffff">Home</a>
+              </li>
+              <li class="mb-2">
+                <a href="about.html" style="color: #ffff"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" style="color: #ffff"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h4 class="mb-4 fw-bolder"><srtong>Contact Us</srtong></h4>
+            <p>Feel free to reach out:</p>
+            <p>
+              <i class="fas fa-envelope mr-2"></i><a href="mailto:kakurajput11223344@gmail.com" style="color: #ffff">kakurajput11223344@gmail.com</a>
+            </p>
+            <p><i class="fas fa-phone mr-2"></i><a href="tel:+91 8527266439" style="color: #ffff">Call us at +91 852-726-6439</a></p>
+          </div>
+        </div>
+        <div class="col-md-12 text-center mb-5">
+          <p>Explore more at other official dictionary sources:</p>
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a
+                href="https://www.oxfordlanguages.com/"
+                target="_blank"
+                class="text-white"
+                >Oxford Languages</a
+              >
+            </li>
+            <li class="list-inline-item">|</li>
+            <li class="list-inline-item">
+              <a
+                href="https://www.merriam-webster.com/"
+                target="_blank"
+                class="text-white"
+                >Merriam-Webster</a
+              >
+            </li>
+            <!-- Add more links as needed -->
+          </ul>
+        </div>
+        <hr class="bg-light mb-5" />
+        <div class="row">
+          
+        </div>
+      </div>
+      <div class="col-md-12 text-center">
+        <p class="mb-0">&copy; 2023 <strong class="text-success">The Dictionary</strong>. All rights reserved.</p>
+        <p class="mb-0">Made with ❤️ by <a href="http://instagram.com/abhithegreatrajput" style="text-decoration: none;" target="_blank" class="text-success font-weight-bold"><strong>Abhishek</strong></a></p>
+      </div>
+      <div class="container text-left">
+        <a href="#top" class="btn btn-light btn-sm" style="margin-left: 76vw;">Top</a>
+    </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
