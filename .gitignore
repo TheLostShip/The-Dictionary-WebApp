@@ -1,4 +1,4 @@
-# Ignoring all the possible files even if they are currently not inclued in the project but might get added in future.
+# Ignoring all the possible files even if they are currently not included in the project but might get added in the future.
 
 # Ignore macOS system files
 .DS_Store
