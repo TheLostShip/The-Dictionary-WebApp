@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
     <title>About Us</title>
   </head>
   <body style="font-family: 'Lexend', sans-serif;">
-    <nav class="navbar navbar-expand-lg bg-dark p-3" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark p-3" style="position: sticky; top: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand text-light" href="index.html" style="font-family: 'Rubik Iso', cursive; font-size: 1.5rem;">TheDictionary</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -211,6 +211,10 @@
       </div>
       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/service-worker.js"></script>
+    <script src="scripts/service-worker-registration.js"></script>
+    <script src="scripts/cookie-management.js"></script>
+    <script src="scripts/cookie.js"></script>
   </body>
 </html>

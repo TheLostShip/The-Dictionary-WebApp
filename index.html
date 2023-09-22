@@ -23,7 +23,7 @@
       name="og:description"
       content="Explore the meanings of words with The Dictionary. Instantly find definitions and explanations for any word you search."
     />
-    <meta name="og:url" content="URL of your website" />
+    <meta name="og:url" content="https://heydictionary.netlify.app/" />
     <meta name="og:site_name" content="The Dictionary" />
     <meta name="og:type" content="website" />
     <meta name="og:locale" content="en_US" />
@@ -35,17 +35,16 @@
       name="twitter:description"
       content="Explore the meanings of words with The Dictionary. Instantly find definitions and explanations for any word you search."
     />
-    <link rel="canonical" href="URL of the main search page" />
-    <link rel="stylesheet" href="URL to your website's main stylesheet" />
+    <link rel="canonical" href="https://heydictionary.netlify.app/" />
     <link
       rel="apple-touch-icon"
-      href="favicon_io/favicon.ico"
+      href="favicon/favicon.ico"
       type="image/png"
     />
-    <link rel="manifest" href="URL to your website's web app manifest" />
+    <link rel="manifest" href="manifest.json" />
     <link
       rel="shortcut icon"
-      href="favicon_io/favicon.ico"
+      href="favicon/favicon.ico"
       type="image/x-icon"
     />
     <link
@@ -60,10 +59,11 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Rubik+Iso&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/style.css">
     <title>The Dictionary App</title>
   </head>
   <body style="font-family: 'Lexend', sans-serif">
-    <nav class="navbar navbar-expand-lg bg-dark p-3" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark p-3" style="position: sticky; top: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);" data-bs-theme="dark">
       <div class="container-fluid">
         <a
           class="navbar-brand text-light"
@@ -181,6 +181,18 @@
           </div>
         </div>
       </div>
+      <div id="cookie-consent-banner" class="container">
+        <div class="row">
+          <h4 class="mb-1 mt-2 ">We value your privacy</h4>
+            <div class="col-md-9">
+                <p>This website uses cookies to ensure you get the best experience on our website, serve personalized ads or content, and analyze our traffic. By clicking "Accept All!", you consent to our use of cookies.</p>
+            </div>
+            <div class="col-md-3 text-right">
+                <button id="accept-cookies" class="accept-button">Accept All!</button>
+                <button id="decline-cookies" class="decline-button">Decline!!</button>
+            </div>
+        </div>
+      <div>
     </main>
     <footer class="bg-dark text-light py-4 d-flex flex-column justify-content-center" >
       <div class="container mt-3">
@@ -257,6 +269,10 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/service-worker.js"></script>
+    <script src="scripts/service-worker-registration.js"></script>
+    <script src="scripts/cookie-management.js"></script>
+    <script src="scripts/cookie.js"></script>
   </body>
 </html>

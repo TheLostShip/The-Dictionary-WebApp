@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="shortcut icon"
-      href="favicon_io/favicon.ico"
+      href="favicon/favicon.ico"
       type="image/x-icon"
     />
     <link
@@ -20,19 +20,11 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Rubik+Iso&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/style.css">
     <title>Our Technology</title>
-
-    <style>
-        /* Adding a hover animation effect */
-        .link-hover:hover {
-            transform: scale(1.1); /* Increase size by 10% on hover */
-            transition: transform 0.3s ease; /* Smooth transition effect */
-        }
-        
-    </style>
   </head>
   <body style="font-family: 'Lexend', sans-serif">
-    <nav class="navbar navbar-expand-lg bg-dark p-3" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark p-3" style="position: sticky; top: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);" data-bs-theme="dark">
       <div class="container-fluid">
         <a
           class="navbar-brand text-light"
@@ -173,11 +165,11 @@
                                         <code class="language-javascript" id="api-code" style="color: black;">
                                           <button class="btn btn-success btn-sm btn-copy mb-4" onclick="copyCode()">Copy Code</button>
 <pre>
-const url = 'https://dictionary-by-api-ninjdictionary?word=bright';
+const url = 'YOUR API URL', Eg: https://dictionary-by-api-ninjdictionary?word=bright
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '7e0b298117msh6017aea8de0a4abp1b3b3bjsn6dd1ab357e5e',
+		'X-RapidAPI-Key': 'YOUR API KEY', Eg: 9ezg87654bgh1234uio0derfbp1b3b3bjsn6dd1ab4545tgf
 		'X-RapidAPI-Host': 'dictionary-by-api-ninjas.p.rapidapi.com'
 	}
 };
@@ -328,7 +320,11 @@ try {
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
-    <script src="copy.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/service-worker.js"></script>
+    <script src="scripts/service-worker-registration.js"></script>
+    <script src="scripts/cookie-management.js"></script>
+    <script src="scripts/cookie.js"></script>
+    <script src="scripts/copy.js"></script>
   </body>
 </html>

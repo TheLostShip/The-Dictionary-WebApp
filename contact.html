@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="shortcut icon"
-      href="favicon_io/favicon.ico"
+      href="favicon/favicon.ico"
       type="image/x-icon"
     />
     <link
@@ -20,10 +20,11 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Rubik+Iso&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/style.css">
     <title>Contact Us</title>
   </head>
   <body style="font-family: 'Lexend', sans-serif">
-    <nav class="navbar navbar-expand-lg bg-dark p-3" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark p-3" style="position: sticky; top: 0; left: 0; right: 0; z-index: 10000; box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);" data-bs-theme="dark">
       <div class="container-fluid">
         <a
           class="navbar-brand text-light"
@@ -125,19 +126,19 @@
                                 <p><strong>Have questions, feedback, or suggestions?</strong> <br> Reach out to us using the form below. Click the "Submit" button to open your email client and send us an email with the provided details. We look forward to hearing from you!</p>
                                 <form action="mailto:kakurajput11223344@gmail.com" method="post" enctype="text/plain">
                                   <div class="form-group mb-4">
-                                    <label for="name" class="mb-2"><strong>Your Name:</strong></label>
+                                    <label for="name" class="mb-2"><strong>Your Name<sup class="imp">*</sup>: </strong></label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name..." required>
                                   </div>
                                   <div class="form-group mb-4">
-                                    <label for="email" class="mb-2"><strong>Your Email:</strong></label>
+                                    <label for="email" class="mb-2"><strong>Your Email<sup class="imp">*</sup>:</strong></label>
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email..." required>
                                   </div>
                                   <div class="form-group mb-4">
                                     <label for="subject" class="mb-2"><strong>Subject:</strong></label>
-                                    <input type="subject" class="form-control" id="subject" name="subject" placeholder="What's the Subject?" required>
+                                    <input type="subject" class="form-control" id="subject" name="subject" placeholder="What's the Subject?">
                                   </div>
                                   <div class="form-group">
-                                    <label for="message" class="mb-2"><strong>Your Message:</strong></label>
+                                    <label for="message" class="mb-2"><strong>Your Message<sup class="imp">*</sup>:</strong></label>
                                     <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type Your Message Here..."  required></textarea>
                                   </div>
                                   <button type="submit" class="btn btn-success btn-lg my-4">Submit</button>
@@ -246,6 +247,10 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/service-worker.js"></script>
+    <script src="scripts/service-worker-registration.js"></script>
+    <script src="scripts/cookie-management.js"></script>
+    <script src="scripts/cookie.js"></script>
   </body>
 </html>

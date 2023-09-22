@@ -1,0 +1,65 @@
+/* Custom styles for the cookie consent banner */
+#cookie-consent-banner {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2); /* Shadow effect on the top border */
+}
+
+#cookie-consent-banner p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+#cookie-consent-banner h4 {
+    font-weight: bold;
+}
+
+.accept-button {
+  background-color: #218838; /* Bootstrap's success-green color */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hover effect */
+}
+
+.accept-button:hover { /* Darker shade on hover */
+  background-color: #28a745; /* Darker shade on hover */
+}
+
+.decline-button {
+    background-color: transparent; /* Transparent background for the Decline button */
+    border: 1px solid #218838; /* Border for the Decline button */
+    border-radius: 5px;
+    color: #218838;
+    padding: 4px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Hover effect */
+}
+
+.decline-button:hover {
+    background-color: #fff; /* White background on hover */
+    color: #28a745; /* Green text on hover */
+    border: 1px solid #28a745;
+}
+
+/* Adding a hover animation effect */
+.link-hover:hover {
+    transform: scale(1.1); /* Increase size by 10% on hover */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* Designing ASTERISK for required info in the form */
+.imp{
+    color: red;
+}
