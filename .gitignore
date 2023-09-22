@@ -1,0 +1,92 @@
+# Ignoring all the possible files even if they are currently not inclued in the project but might get added in future.
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+desktop.ini
+
+# Ignore Node.js dependencies (if using Node.js)
+node_modules/
+
+# Ignore Python virtual environment (if using Python)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore editor/IDE specific files
+.idea/
+.vscode/
+
+# Ignore build and distribution directories
+/build/
+/dist/
+
+# Ignore log files
+*.log
+
+# Ignore package-lock.json and yarn.lock (if using Node.js)
+package-lock.json
+yarn.lock
+
+# Ignore environment-specific configuration files with sensitive data
+config.ini
+secrets.json
+
+# Ignore generated files (e.g., compiled code, generated documentation)
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.swp
+*.swo
+*.swn
+*.swo
+*.log
+*.log.*
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.zip
+*.gz
+*.tar
+*.rar
+*.7z
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+*.csv
+*.json
+
+# Ignore user-specific files or configuration
+*.iml
+*.log
+*.properties
+
+# Ignore database files (e.g., SQLite)
+*.sqlite
+*.sqlite3
+
+# Ignore sensitive or private files
+.env
+.env.local
+.env.*.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# Ignore miscellaneous files
+.cache/
+logs/
+temp/
